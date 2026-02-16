@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --color-background: hsl(40 50% 98%); /* Warm off-white background */
+  --color-foreground: hsl(20 10% 10%); /* Dark warm gray text */
+
+  /* Election Theme Colors - Saffron, White, Green + Strong Accents */
+  --color-primary: hsl(25 90% 50%); /* Saffron/Orange - Dominant */
+  --color-primary-foreground: hsl(0 0% 100%);
+
+  --color-secondary: hsl(140 80% 30%); /* Indian Green */
+  --color-secondary-foreground: hsl(0 0% 100%);
+
+  --color-accent: hsl(45 90% 50%); /* Gold/Yellow for highlights */
+  --color-accent-foreground: hsl(20 10% 10%);
+
+  --color-destructive: hsl(0 80% 50%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+
+  --color-muted: hsl(30 20% 90%);
+  --color-muted-foreground: hsl(20 5% 40%);
+
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(20 10% 10%);
+
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(20 10% 10%);
+
+  --color-border: hsl(30 20% 85%);
+  --color-input: hsl(30 20% 85%);
+  --color-ring: hsl(25 90% 50%);
+
+  --radius: 0.5rem;
+  
+  --font-sans: "Noto Sans Devanagari", sans-serif;
+  --font-display: "Rozha One", serif;
+  --font-teko: "Teko", sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground selection:bg-primary/20;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .text-shadow-lg {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  .text-stroke {
+    -webkit-text-stroke: 1px black;
+    color: white;
+  }
+}
